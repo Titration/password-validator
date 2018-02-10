@@ -15,6 +15,15 @@ public class Validator {
         if (!password.equalsIgnoreCase("password")) {   //it is not “password” (case insensitive)
             numberOfRule++;
         }
+        if (password.matches(".*[! # @ $ % ^ & * ( ) - _ = + [ ] ; : ' \" , < . > / ?].*")) { //requiring at least 1 special character
+            numberOfRule++;
+        }
+        if (password.matches(".*[0-9].*")) { //requiring at least 1 digit
+            numberOfRule++;
+        }
+        if (password.matches(".*[a-z].*[A-Z].*")) { //requiring upper and lower case
+            numberOfRule++;
+        }
 
         return numberOfRule;
     }
