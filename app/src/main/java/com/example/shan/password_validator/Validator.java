@@ -21,7 +21,7 @@ public class Validator {
         if (password.matches(".*[0-9].*")) { //requiring at least 1 digit
             numberOfRule++;
         }
-        if (password.matches(".*[a-z].*[A-Z].*")) { //requiring upper and lower case
+        if (password.matches(".*[A-Z].*")) { //requiring upper case
             numberOfRule++;
         }
 

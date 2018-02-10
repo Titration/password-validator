@@ -36,6 +36,6 @@ public class ValidatorUnitTest {
     @Test
     public void checkCase() {
         Validator validator = new Validator(); //constructor
-        assertEquals(2, validator.validate("AbAbAb")); //return 2, the string contains upper and lower cases and not equal to "password"
+        assertEquals(2, validator.validate("ABABAB")); //return 2, the string contains upper and not equal to "password"
     }
 }
